@@ -1,0 +1,96 @@
+https://docs.google.com/document/d/1kDYnP3MRqM1uFSZ8cgpar7lqatInVxLq5I_okdRHSp4/edit
+
+"Problem #1"
+
+var result = 1;
+for(var num = 12; num != 1; num--){
+	result *= num;
+}
+console.log("12 factorial is "+result);
+
+
+"Problem #2"
+
+function laugh(num){
+	var statement = "";
+	for(var x = 0; x != num; x++){
+		statement = statement + "ha";
+	}
+	if(x != 0){
+		statement = statement + "!";
+	}
+	return statement;
+}
+
+console.log(laugh(3));
+
+
+"Problem #3"
+
+//function emotions(emotion, func){
+//	console.log("I am happy,"+func);
+//}
+//emotions("happy", laugh(2));
+--------------------------------------------------
+"Problem #3"
+var feelings = "I am";
+function emotions(emotion, times, func){
+	feelings = feelings+ " " + emotion+",";
+	func(times);
+}
+
+emotions("happy", 3, function(times){
+	var statement = feelings;
+	for(var x = 0; x != times; x++){
+		statement = statement + "ha";
+	}
+	if(x != 0){
+		statement = statement + "!";
+	}
+	console.log(statement);
+});
+---------------------------------------------------
+"Problem #4"
+
+var numbers = [
+    [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+    [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+    [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+    [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+    [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+    [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+    [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+    [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+    [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+    [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+];
+
+for(var x = 0; x < numbers.length; x++){
+	for(var y = 0; y < numbers[x].length; y++){
+		numbers[x][y] = (numbers[x][y] % 2 == 0) ? "even" : "odd";
+	}
+}
+console.log(numbers);
+
+
+"Problem #5"
+
+var facebookProfile = {
+	name: "Jerly Palacio",
+	noOfFriends: 200,
+	messages: ["hello", "how are you?", "hi Jane", "see you soonest"],
+	postMessage: function(message){
+		this.messages.push(message);
+	},
+	deleteMessage: function(index){
+		this.messages.splice(index, 1);
+	},
+	addFriend: function(){
+		this.noOfFriends++;
+	},
+	removeFriend: function(){
+		if(this.noOfFriends - 1 >= 0){
+			this.noOfFriends--;	
+		}
+	}
+}
