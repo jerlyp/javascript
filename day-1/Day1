@@ -1,0 +1,47 @@
+Javascript Answers
+
+console.log("Problem #1")
+var signedIn;
+console.log(signedIn);
+
+	undefined
+
+console.log("Problem #2")
+var thingOne = "red";
+var thingTwo = "blue";
+console.log(thingOne+" "+thingTwo);
+
+console.log("Problem #3")
+var bill = 10.25 + 3.99 + 7.15;
+var tip = bill * 0.15;
+var total = bill + tip;
+console.log("$"+ total.toFixed(2));
+
+console.log("Problem #4")
+var number = 1;
+
+if(number % 2 == 0){
+	console.log("even");
+}else{
+	console.log("odd");
+}
+
+console.log("Problem #5")
+var musicians = 0;
+
+if(musicians <= 0){
+	console.log("not a group");
+}else{
+	switch(musicians){
+		case 1:
+			console.log("solo"); break;
+		case 2:
+			console.log("duet"); break;
+		case 3:
+			console.log("trio"); break;
+		case 4:
+			console.log("quartet"); break;
+		default:
+			console.log("this is a large group");
+	}	
+}
